@@ -31,7 +31,7 @@ services:
     restart: always
     volumes:
       - type: bind
-        source: /DATA/AppData/$AppID/db/data
+        source: /DATA/AppData/cloudrack-wordpress/db/data
         target: /var/lib/mysql
     networks:
       - db
@@ -57,7 +57,7 @@ services:
     restart: always
     volumes:
       - type: bind
-        source: /DATA/AppData/$AppID/wp-content
+        source: /DATA/AppData/cloudrack-wordpress/wp-content
         target: /var/www/html/wp-content
     networks:
       - db
