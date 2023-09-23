@@ -1,30 +1,29 @@
 manifestVersion: 1
-id: cloudrack-hello-world
-name: Hello World
-tagline: Replace this tagline with your app's tagline
-icon: https://svgur.com/i/mvA.svg
+id: cloudrack-wordpress
+name: Wordpress
+tagline: WordPress The Most Powerful CMS You Will Ever Need. # Short description or tagline in English
+icon: https://wordpress.org/wp-content/themes/pub/wporg/images/wp-logo-blue.png
 category: Development
 version: "1.0.0"
-port: 4000
+port: 80
 description: >-
-  Add your app's description here.
+ WordPress (also known as WP or WordPress.org) is a web content management system. It was originally created as a tool to publish blogs but has evolved to support publishing other web content, including more traditional websites, mailing lists and Internet forum, media galleries, membership sites, learning management systems and online stores. Available as free and open-source software, WordPress is among the most popular content management systems – it was used by 42.8% of the top 10 million websites as of October 2021. # Description in English
 
+  keep up to date by going to https://cloudrack.ca!
 
-  You can also add newlines!
-
-developer: Umbrel
-website: https://umbrel.com
-submitter: Umbrel
-submission: https://github.com/getumbrel/umbrel-hello-world-app
-repo: https://github.com/getumbrel/umbrel-hello-world-app
-support: https://github.com/getumbrel/umbrel-hello-world-app/issues
+developer: Cloudrack
+website: https://cloudrack.ca
+submitter: Cloudrack
+submission: https://github.com/cloudrack-ca/umbrel-template
+repo: https://github.com/cloudrack-ca/umbrel-template
+support: https://github.com/cloudrack-ca/umbrel-template/issues
 gallery:
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.ibb.co/fSMFLWD/Word-Press-Post-960x600-896x560.png
+# - https://i.imgur.com/yyVG0Jb.jpeg
+# - https://i.imgur.com/yyVG0Jb.jpeg
 releaseNotes: >-
-  Add what's new in the latest version of your app here.
+  First Official Release Of Wordpress On Umbrel.
 dependencies: []
-path: ""
+path: "/"
 defaultUsername: ""
 defaultPassword: ""
