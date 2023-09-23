@@ -1,0 +1,66 @@
+version: "3.7"
+
+services:
+
+  app_proxy:
+    environment:
+      # The format here is: <app-id>_<docker-service-name>_1
+      APP_HOST: cloudrack-wordpress_1
+      APP_PORT: 80
+    
+  server:
+    image: github.com/cloudrack-ca/umbrel-template:latest
+    user: "1000:1000"
+    init: true
+
+name: wordpress
+services:
+  db:
+    container_name: db
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=database
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=rootpass
+      - MYSQL_USER=username
+    ports:
+      - target: 3306
+        published: "3306"
+        protocol: tcp
+    privileged: true
+    restart: always
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/db/data
+        target: /var/lib/mysql
+    networks:
+      - db
+  wordpress:
+    container_name: wordpress
+    depends_on:
+      db:
+        condition: service_started
+        required: true
+    environment:
+      - WORDPRESS_DB_HOST=db:3306
+      - WORDPRESS_DB_NAME=database
+      - WORDPRESS_DB_PASSWORD=password
+      - WORDPRESS_DB_USER=username
+    image: wordpress:latest
+    labels:
+      icon: https://wordpress.org/wp-content/themes/pub/wporg/images/wp-logo-blue.png
+    ports:
+      - target: 80
+        published: "8880"
+        protocol: tcp
+    privileged: true
+    restart: always
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/wp-content
+        target: /var/www/html/wp-content
+    networks:
+      - db
+networks:
+  db:
+    name: db
