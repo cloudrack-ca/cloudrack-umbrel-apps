@@ -6,7 +6,7 @@ services:
     environment:
       # The format here is: <app-id>_<docker-service-name>_1
       APP_HOST: cloudrack-wordpress_1
-      APP_PORT: 80
+      APP_PORT: 44886
     
   server:
     image: github.com/cloudrack-ca/umbrel-template:latest
@@ -50,7 +50,7 @@ services:
     labels:
       icon: https://wordpress.org/wp-content/themes/pub/wporg/images/wp-logo-blue.png
     ports:
-      - target: 80
+      - target: 44886
         published: "8880"
         protocol: tcp
     privileged: true
