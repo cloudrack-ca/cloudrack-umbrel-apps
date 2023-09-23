@@ -9,7 +9,7 @@ services:
 
 
   web:
-    image: github.com/getumbrel/umbrel-apps
+    image: wordpress
     user: 1000:1000
     init: true
     restart: on-failure
