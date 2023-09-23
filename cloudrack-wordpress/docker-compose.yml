@@ -6,9 +6,6 @@ services:
       APP_HOST: cloudrack_wordpress_1
       APP_PORT: 8088
       PROXY_AUTH_ADD: "false"
-
-
-  web:
     image: wordpress
     user: 1000:1000
     init: true
@@ -16,4 +13,3 @@ services:
     stop_grace_period: 1m
     healthcheck:
       disable: true
-    environment:
