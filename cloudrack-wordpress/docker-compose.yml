@@ -23,8 +23,9 @@ services:
       WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: exampledb
     volumes:
-      - wordpress:/var/www/html
-
+      - type: bind
+        source: wordpress
+        target: /var/www/html
   db:
     image: mysql:5.7
     restart: always
@@ -34,8 +35,9 @@ services:
       MYSQL_PASSWORD: examplepass
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
-      - db:/var/lib/mysql
-
+      - type: bind
+        source: db_data
+        target: /var/lib/mysql
 volumes:
   wordpress:
   db:
