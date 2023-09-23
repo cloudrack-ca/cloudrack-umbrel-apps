@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: cloudrack_wordpress
+id: cloudrack-wordpress_app_proxy_1
 name: Wordpress
 tagline: WordPress The Most Powerful CMS You Will Ever Need. # Short description or tagline in English
 icon: https://wordpress.org/wp-content/themes/pub/wporg/images/wp-logo-blue.png
