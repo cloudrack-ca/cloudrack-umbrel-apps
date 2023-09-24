@@ -5,7 +5,7 @@ tagline: Kasm Workspaces is a container streaming platform that provides enterpr
 icon: https://i.ibb.co/JqVkFv4/image.png
 category: Development
 version: "kasm"
-port: 8444
+port: 3022
 description: >-
  Streaming containerized apps and desktops to end-users. The Workspaces platform provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser.
 
@@ -23,7 +23,7 @@ gallery:
   - https://www.kasmweb.com/assets/videos/browser_gif.mp4
   - https://www.kasmweb.com/assets/videos/appstream_final.mp4
 releaseNotes: >-
-  - Please note that if you are not accessing your umbrel by its private exposed ip i.e 10.0.0.202 for say then you might need to open a new tab and head over to your umbrel IP:8444 to get started
+  - Please note that if you are not accessing your umbrel by its private exposed ip i.e 10.0.0.202 for say then you might need to open a new tab and head over to your umbrel IP:3022 to install kasmweb you will be given a front end login url from there after install.
   
   - First Official Release Of KasmWeb On Umbrel. keep up to date by going to https://cloudrack.ca
 dependencies: []
