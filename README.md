@@ -5,7 +5,8 @@ You can use the Umbrel CLI as described below.
 To add an app store:
 ```
 sudo ~/umbrel/scripts/repo add https://github.com/cloudrack-ca/cloudrack-umbrel-apps.git
-
+```
+```
 sudo ~/umbrel/scripts/repo update
 ```
 
