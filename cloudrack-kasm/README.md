@@ -1,4 +1,4 @@
-# WordPress On Umbrel
+# KasmWeb On Umbrel
 ---
 # Install Kasmweb on your Umbrel with 
 ```shell
