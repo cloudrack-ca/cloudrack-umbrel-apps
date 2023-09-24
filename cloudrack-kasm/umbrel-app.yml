@@ -18,9 +18,8 @@ submission: https://github.com/cloudrack-ca/cloudrack-umbrel-apps
 repo: https://github.com/cloudrack-ca/cloudrack-umbrel-apps
 support: https://github.com/cloudrack-ca/cloudrack-umbrel-apps/issues
 gallery:
-  - https://www.kasmweb.com/assets/videos/desktop_gif_final.mp4
-# - https://www.kasmweb.com/assets/videos/browser_gif.mp4
-# - https://www.kasmweb.com/assets/videos/appstream_final.mp4
+  - https://i.ibb.co/6ZXkK0y/install-thumbnail.jpg
+  
 releaseNotes: >-
   - Please note that if you are not accessing your umbrel by its private exposed ip i.e 10.0.0.202 for say then you might need to open a new tab and head over to your umbrel IP:3022 to install kasmweb you will be given a front end login url from there after install.
   
