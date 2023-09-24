@@ -1,10 +1,10 @@
 manifestVersion: 1
 id: cloudrack-wordpress
-name: fixed? Wordpress
+name: Wordpress
 tagline: WordPress The Most Powerful CMS You Will Ever Need. # Short description or tagline in English
 icon: https://wordpress.org/wp-content/themes/pub/wporg/images/wp-logo-blue.png
 category: Development
-version: "1.0.0"
+version: "1.0.1"
 port: 8080
 description: >-
  WordPress (also known as WP or WordPress.org) is a web content management system. It was originally created as a tool to publish blogs but has evolved to support publishing other web content, including more traditional websites, mailing lists and Internet forum, media galleries, membership sites, learning management systems and online stores. Available as free and open-source software, WordPress is among the most popular content management systems – it was used by 42.8% of the top 10 million websites as of October 2021. # Description in English
