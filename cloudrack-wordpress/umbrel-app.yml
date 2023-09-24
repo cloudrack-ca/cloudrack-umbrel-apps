@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: cloudrack-wordpress
 name: Wordpress
-tagline: WordPress The Most Powerful CMS You Will Ever Need. # Short description or tagline in English
+tagline: WordPress The Most Powerful CMS You Will Ever Need. 
 icon: https://raw.githubusercontent.com/cloudrack-ca/umbrel-template/master/icons/wordpress-icon.png
 category: Development
 version: "wordpress:stable"
@@ -9,7 +9,7 @@ port: 8042
 description: >-
  WordPress (also known as WP or WordPress.org) is a web content management system. It was originally created as a tool to publish blogs but has evolved to support publishing other web content, including more traditional websites, mailing lists and Internet forum, media galleries, membership sites, learning management systems and online stores. Available as free and open-source software, WordPress is among the most popular content management systems – it was used by 42.8% of the top 10 million websites as of October 2021.
 
-  Important For Using > Please note that if you are not accessing your umbrel by its private exposed ip i.e 10.0.0.203 for say then you might need to open a new tab and head over to your umbrel IP:8042 to get started
+  Wordpress.org
   
 developer: Cloudrack
 website: https://cloudrack.ca
@@ -22,7 +22,8 @@ gallery:
 # - https://i.imgur.com/yyVG0Jb.jpeg
 # - https://i.imgur.com/yyVG0Jb.jpeg
 releaseNotes: >-
-  First Official Release Of Wordpress On Umbrel. keep up to date by going to https://cloudrack.ca
+  - Important For Using > Please note that if you are not accessing your umbrel by its private exposed ip i.e 10.0.0.203 for say then you might need to open a new tab and head over to your umbrel IP:8042 to get started
+  - First Official Release Of Wordpress On Umbrel. keep up to date by going to https://cloudrack.ca
 dependencies: []
 path: "/"
 defaultUsername: "create on install"
