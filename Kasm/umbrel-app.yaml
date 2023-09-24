@@ -1,0 +1,32 @@
+manifestVersion: 1
+id: cloudrack-kasm
+name: Kasm
+tagline: Kasm Workspaces is a container streaming platform that provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser. 
+icon: https://i.ibb.co/JqVkFv4/image.png
+category: Development
+version: "kasm"
+port: 3022
+description: >-
+ Streaming containerized apps and desktops to end-users. The Workspaces platform provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser.
+
+
+  kasmweb.com
+  
+developer: Cloudrack
+website: https://cloudrack.ca
+submitter: Cloudrack
+submission: https://github.com/cloudrack-ca/cloudrack-umbrel-apps
+repo: https://github.com/cloudrack-ca/cloudrack-umbrel-apps/kasm
+support: https://github.com/cloudrack-ca/cloudrack-umbrel-apps/kasm/issues
+gallery:
+  - https://www.kasmweb.com/assets/videos/desktop_gif_final.mp4
+  - https://www.kasmweb.com/assets/videos/browser_gif.mp4
+  - https://www.kasmweb.com/assets/videos/appstream_final.mp4
+releaseNotes: >-
+  - Please note that if you are not accessing your umbrel by its private exposed ip i.e 10.0.0.202 for say then you might need to open a new tab and head over to your umbrel IP:3022 to get started
+  
+  - First Official Release Of KasmWeb On Umbrel. keep up to date by going to https://cloudrack.ca
+dependencies: []
+path: "/"
+defaultUsername: "create on install"
+defaultPassword: "create on install"
