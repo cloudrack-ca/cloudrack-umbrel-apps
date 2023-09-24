@@ -6,7 +6,7 @@ services:
     user: 1000:1000
     restart: always
     ports:
-      - 8080:80
+      - 8080:8080
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: exampleuser
@@ -17,6 +17,8 @@ services:
       PROXY_AUTH_ADD: "false"
     volumes:
       - wordpress:/var/www/html
+      - themes:/var/www/html/wp-content/themes
+      - plugins:/var/www/html/wp-content/plugins
   db:
     image: mysql:5.7
     restart: always
@@ -26,7 +28,11 @@ services:
       MYSQL_PASSWORD: examplepass
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
-      - /wordpress/db:/var/lib/mysql
+      - db:/var/lib/mysql
+      - logs:/var/log/mysql
 volumes:
   wordpress:
   db:
+  themes:
+  plugins:
+  logs:
