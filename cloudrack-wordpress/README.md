@@ -1,3 +1,6 @@
-# Cloudrack-Umbrel-Wordpress
+# WordPress On Umbrel
 ---
-Please visit our [`wiki`](https://wiki.cloudrack.ca/) for more
+# Install WordPress on your Umbrel with 
+```shell
+sudo ~/umbrel/scripts/app install cloudrack-wordpress
+```
