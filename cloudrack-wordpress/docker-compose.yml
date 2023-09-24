@@ -5,7 +5,7 @@ services:
   wordpress:
     image: wordpress
     user: 1000:1000
-    restart: on-failure
+    restart: always
     ports:
       - 8042:80
     environment:
@@ -23,7 +23,7 @@ services:
 
   db:
     image: mysql:5.7
-    restart: on-failure
+    restart: always
     environment:
       MYSQL_DATABASE: exampledb
       MYSQL_USER: exampleuser
