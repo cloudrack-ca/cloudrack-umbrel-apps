@@ -14,9 +14,9 @@ description: >-
 developer: Cloudrack
 website: https://cloudrack.ca
 submitter: Cloudrack
-submission: https://github.com/cloudrack-ca/umbrel-template
-repo: https://github.com/cloudrack-ca/umbrel-template
-support: https://github.com/cloudrack-ca/umbrel-template/issues
+submission: https://github.com/cloudrack-ca/cloudrack-umbrel-apps
+repo: https://github.com/cloudrack-ca/cloudrack-umbrel-apps
+support: https://github.com/cloudrack-ca/cloudrack-umbrel-apps/issues
 gallery:
   - https://i.ibb.co/fSMFLWD/Word-Press-Post-960x600-896x560.png
 # - https://i.imgur.com/yyVG0Jb.jpeg
