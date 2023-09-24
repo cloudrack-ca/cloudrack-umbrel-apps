@@ -18,7 +18,7 @@ submission: https://github.com/cloudrack-ca/cloudrack-umbrel-apps
 repo: https://github.com/cloudrack-ca/cloudrack-umbrel-apps
 support: https://github.com/cloudrack-ca/cloudrack-umbrel-apps/issues
 gallery:
-# - https://www.kasmweb.com/assets/videos/desktop_gif_final.mp4
+  - https://www.kasmweb.com/assets/videos/desktop_gif_final.mp4
 # - https://www.kasmweb.com/assets/videos/browser_gif.mp4
 # - https://www.kasmweb.com/assets/videos/appstream_final.mp4
 releaseNotes: >-
