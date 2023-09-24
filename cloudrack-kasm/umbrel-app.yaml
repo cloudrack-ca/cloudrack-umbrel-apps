@@ -26,6 +26,6 @@ releaseNotes: >-
   
   - First Official Release Of KasmWeb On Umbrel. keep up to date by going to https://cloudrack.ca
 dependencies: []
-path: "/"
+path: "/kasm"
 defaultUsername: "create on install"
 defaultPassword: "create on install"
