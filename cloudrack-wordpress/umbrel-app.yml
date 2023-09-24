@@ -22,7 +22,8 @@ gallery:
 # - https://i.imgur.com/yyVG0Jb.jpeg
 # - https://i.imgur.com/yyVG0Jb.jpeg
 releaseNotes: >-
-  - Important For Using > Please note that if you are not accessing your umbrel by its private exposed ip i.e 10.0.0.203 for say then you might need to open a new tab and head over to your umbrel IP:8042 to get started
+  - Please note that if you are not accessing your umbrel by its private exposed ip i.e 10.0.0.203 for say then you might need to open a new tab and head over to your umbrel IP:8042 to get started
+  
   - First Official Release Of Wordpress On Umbrel. keep up to date by going to https://cloudrack.ca
 dependencies: []
 path: "/"
