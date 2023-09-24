@@ -6,7 +6,7 @@ services:
     user: 1000:1000
     restart: always
     ports:
-      - 8080:8080
+      - 8080:80
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: exampleuser
@@ -29,10 +29,8 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db:/var/lib/mysql
-      - logs:/var/log/mysql
 volumes:
   wordpress:
   db:
   themes:
   plugins:
-  logs:
