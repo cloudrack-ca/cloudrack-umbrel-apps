@@ -1,13 +1,6 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: cloudrack-wordpress_app_proxy_1
-      APP_PORT: 8080
-      PROXY_AUTH_ADD: "false"
-  
   wordpress:
     image: wordpress
     user: 1000:1000
@@ -19,6 +12,9 @@ services:
       WORDPRESS_DB_USER: exampleuser
       WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: exampledb
+      APP_HOST: cloudrack-wordpress_app_proxy_1
+      APP_PORT: 8080
+      PROXY_AUTH_ADD: "false"
     volumes:
       - wordpress:/var/www/html
   db:
