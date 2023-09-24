@@ -6,15 +6,11 @@ services:
       # The format here is: <app-id>_<docker-service-name>_1
       APP_HOST: cloudrack-wordpress_app_proxy_1
       APP_PORT: 8080
-      PROXY_AUTH_ADD: "true"
-   wordpress: 
+      PROXY_AUTH_ADD: "false"
+  
+  wordpress:
     image: wordpress
     user: 1000:1000
-    init: true
-    restart: on-failure
-    stop_grace_period: 1m
-    healthcheck:
-      disable: true
     restart: always
     ports:
       - 8080:8080
