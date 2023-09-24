@@ -2,15 +2,12 @@ version: "3.7"
 
 services:
   kasm:
-    container_name: kasm
     environment:
       - DOCKER_HUB_PASSWORD=PASS
       - DOCKER_HUB_USERNAME=USER
       - DOCKER_MTU=1500
       - KASM_PORT=8444
     image: lscr.io/linuxserver/kasm:latest
-    labels:
-      icon: https://icon.casaos.io/main/all/kasm.png
     ports:
       - target: 3000
         published: "3022"
@@ -22,10 +19,10 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /DATA/AppData/$AppID/data
+        source: /DATA/AppData/Kasmweb/data
         target: /opt
       - type: bind
-        source: /DATA/AppData/$AppID/profiles
+        source: /DATA/AppData/Kasmweb/profiles
         target: /profiles
     networks:
       - kasm
