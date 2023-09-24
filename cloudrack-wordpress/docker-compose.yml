@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   wordpress:
-    image: wordpress
+    image: bitnami/wordpress:latest
     user: 1000:1000
     restart: always
     ports:
