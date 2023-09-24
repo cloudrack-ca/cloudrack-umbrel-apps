@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: cloudrack-wordpress
-name: TESTWordpress
+name: Wordpress
 tagline: WordPress The Most Powerful CMS You Will Ever Need. 
 icon: https://raw.githubusercontent.com/cloudrack-ca/umbrel-template/master/icons/wordpress-icon.png
 category: Development
