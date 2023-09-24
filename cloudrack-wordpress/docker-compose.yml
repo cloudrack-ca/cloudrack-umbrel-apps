@@ -1,10 +1,11 @@
 version: "3.7"
 
 services:
+
   wordpress:
-    image: bitnami/wordpress:latest
+    image: wordpress
     user: 1000:1000
-    restart: always
+    restart: on-failure
     ports:
       - 8042:80
     environment:
@@ -19,9 +20,10 @@ services:
       - wordpress:/var/www/html
       - themes:/var/www/html/wp-content/themes
       - plugins:/var/www/html/wp-content/plugins
+
   db:
     image: mysql:5.7
-    restart: always
+    restart: on-failure
     environment:
       MYSQL_DATABASE: exampledb
       MYSQL_USER: exampleuser
@@ -29,6 +31,7 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db:/var/lib/mysql
+
 volumes:
   wordpress:
   db:
