@@ -22,7 +22,7 @@ gallery:
 # - https://i.imgur.com/yyVG0Jb.jpeg
 # - https://i.imgur.com/yyVG0Jb.jpeg
 releaseNotes: >-
-  First Official Release Of Wordpress On Umbrel. keep up to date by going to https://cloudrack.ca! Hopefully, this setup finally works. Working but issues with app in the store itself just says `starting` all the time even tho its started.
+  First Official Release Of Wordpress On Umbrel. keep up to date by going to https://cloudrack.ca! Hopefully, this setup finally works. Working but issues with app in the store itself just says "starting" all the time even tho its started.
 dependencies: []
 path: "/"
 defaultUsername: "create on install"
