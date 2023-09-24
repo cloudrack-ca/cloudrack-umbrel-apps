@@ -1,34 +1,26 @@
 version: "3.7"
 
 services:
+
   kasm:
-    environment:
-        DOCKER_HUB_PASSWORD: PASS
-        DOCKER_HUB_USERNAME: USER
-        DOCKER_MTU: 1500
-        KASM_PORT: 8444
-        APP_HOST: cloudrack-kasm_1
-        APP_PORT: 8042
-        PROXY_AUTH_ADD: "true"
     image: lscr.io/linuxserver/kasm:latest
-    ports:
-      - target: 3000
-        published: "3022"
-        protocol: tcp
-      - target: 443
-        published: "8444"
-        protocol: tcp
-    privileged: true
+    user: 1000:1000
     restart: unless-stopped
+    ports:
+     - 8444:8444
+     - 3022:3000
+    environment:
+      DOCKER_HUB_PASSWORD: PASS
+      DOCKER_HUB_USERNAME: USER
+      DOCKER_MTU: 1500
+      KASM_PORT: 8444
+      APP_HOST: cloudrack-kasm_1
+      APP_PORT: 3022
+      PROXY_AUTH_ADD: "true"
     volumes:
-      - type: bind
-        source: /DATA/AppData/Kasmweb/data
-        target: /opt
-      - type: bind
-        source: /DATA/AppData/Kasmweb/profiles
-        target: /profiles
-    networks:
-      - kasm
-networks:
-  kasm:
-    name: kasm
+      - kasmweb_data:/opt
+      - kasmweb_profiles:/profiles
+
+volumes:
+   kasmweb_data:
+   kasmweb_profiles:
