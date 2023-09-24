@@ -2,7 +2,7 @@ manifestVersion: 1
 id: cloudrack-wordpress
 name: Wordpress
 tagline: WordPress The Most Powerful CMS You Will Ever Need. # Short description or tagline in English
-icon: https://logosmarcas.net/wp-content/uploads/2020/11/WordPress-Emblema.png
+icon: https://raw.githubusercontent.com/cloudrack-ca/umbrel-template/master/icons/wordpress/1601149.png
 category: Development
 version: "wordpress:stable"
 port: 8042
