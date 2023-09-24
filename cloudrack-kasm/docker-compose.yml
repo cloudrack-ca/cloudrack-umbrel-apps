@@ -14,13 +14,13 @@ services:
       APP_PORT: 3022
       PROXY_AUTH_ADD: "true"
     volumes:
-      - kasmweb_data:/opt
-      - kasmweb_profiles:/profiles
+      - data:/opt
+      - profiles:/profiles
     restart: unless-stopped
     ports:
       - 8444:443
       - 3022:3000
 
 volumes:
-  kasmweb_data:
-  kasmweb_profiles:
+  data:
+  profiles:
