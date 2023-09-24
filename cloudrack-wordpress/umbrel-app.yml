@@ -25,5 +25,5 @@ releaseNotes: >-
   First Official Release Of Wordpress On Umbrel.
 dependencies: []
 path: "/"
-defaultUsername: ""
-defaultPassword: ""
+defaultUsername: "create on install"
+defaultPassword: "create on install"
