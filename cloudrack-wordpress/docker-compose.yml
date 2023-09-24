@@ -3,7 +3,7 @@ version: "3.7"
 services:
   wordpress:
     image: wordpress
-    user: 1000:1000
+    user: 1001:1001
     restart: always
     ports:
       - 8080:80
