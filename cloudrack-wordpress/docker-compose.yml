@@ -13,7 +13,7 @@ services:
       WORDPRESS_DB_USER: exampleuser
       WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: exampledb
-      APP_HOST: cloudrack-wordpress_app_proxy_1
+      APP_HOST: cloudrack-wordpress_1
       APP_PORT: 8042
       PROXY_AUTH_ADD: "true"
     volumes:
