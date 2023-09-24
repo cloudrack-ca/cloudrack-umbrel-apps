@@ -1,4 +1,4 @@
-## Cloudrack Umbrel Community App Store
+# Cloudrack Umbrel Community App Store
 
 You can use the Umbrel CLI as described below.
 
