@@ -1,0 +1,7 @@
+# Not used as wiki.cloudrack.ca will be cloudrack.ca
+remote_theme: pages-themes/time-machine@v0.2.0
+plugins:
+- jekyll-remote-theme
+title: CloudRack CasaOS App Repo
+description: Cloudrack CasaOS App Repo Is Built To Help Users Expand Their Already Expanding Cloud Using CasaOS.io
+show_downloads: false
