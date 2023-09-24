@@ -1,6 +1,6 @@
-# Kasmweb On Umbrel
+# WordPress On Umbrel
 ---
-# Install with 
+# Install Kasmweb on your Umbrel with 
 ```shell
 sudo ~/umbrel/scripts/app install cloudrack-kasm
 ```
