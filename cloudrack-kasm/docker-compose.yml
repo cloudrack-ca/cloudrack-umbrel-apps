@@ -10,7 +10,7 @@ services:
       DOCKER_HUB_USERNAME: USER
       DOCKER_MTU: 1500
       KASM_PORT: 8444
-      APP_HOST: cloudrack_kasm_1
+      APP_HOST: cloudrack-kasm_kasm_1
       APP_PORT: 3022
       PROXY_AUTH_ADD: "false"
     volumes:
