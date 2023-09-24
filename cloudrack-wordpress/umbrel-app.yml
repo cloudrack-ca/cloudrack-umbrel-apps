@@ -24,6 +24,6 @@ gallery:
 releaseNotes: >-
   First Official Release Of Wordpress On Umbrel.
 dependencies: []
-path: "/wordpress"
+path: "/"
 defaultUsername: ""
 defaultPassword: ""
