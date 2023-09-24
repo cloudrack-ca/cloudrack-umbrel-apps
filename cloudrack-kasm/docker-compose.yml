@@ -12,7 +12,7 @@ services:
       KASM_PORT: 8444
       APP_HOST: cloudrack-kasm_kasm_1
       APP_PORT: 3022
-      PROXY_AUTH_ADD: "false"
+      PROXY_AUTH_ADD: "true"
     volumes:
       - kasmweb_data:/opt
       - kasmweb_profiles:/profiles
