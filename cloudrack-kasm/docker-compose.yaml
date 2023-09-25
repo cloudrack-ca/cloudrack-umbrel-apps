@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+    desktop:
+        image: 'kasmweb/desktop:1.13.0'
+        container_name: kasm
+        privileged: true
+        ports:
+            - '6901:6901'
+        environment:
+            - VNC_PW=password
