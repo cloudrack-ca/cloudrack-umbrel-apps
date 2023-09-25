@@ -1,3 +1,4 @@
+  GNU nano 6.2                                         docker-compose.yml                                                   
 version: "3.7"
 
 services:
@@ -17,6 +18,8 @@ services:
       - cloudrack-kasm-data:/opt
       - cloudrack-kasm-profiles:/profiles
     restart: unless-stopped
+    networks:
+      - kasm
     ports:
       - target: 3000
         published: "3022"
@@ -24,6 +27,9 @@ services:
       - target: 443
         published: "443"
         protocol: tcp
+networks:
+  kasm:
+    name: kasm
 volumes:
   cloudrack-kasm-data:
   cloudrack-kasm-profiles:
