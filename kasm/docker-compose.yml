@@ -1,20 +1,14 @@
 version: "3.7"
 
 services:
-
   kasm:
     image: lscr.io/linuxserver/kasm:latest
+    container_name: kasm
     user: "root"
-    restart: unless-stopped
     privileged: true
     security_opt:
       - apparmor:unconfined
       - "label:disable"
-services:
-  kasm:
-    image: lscr.io/linuxserver/kasm:latest
-    container_name: kasm
-    privileged: true
     environment:
       KASM_PORT: 443
       DOCKER_HUB_USERNAME: USER #optional
@@ -27,18 +21,10 @@ services:
       TITLE: cloudrack-kasm
     volumes:
       - /DATA/AppData/kasmweb/data:/opt
-      - /DATA/AppData/profiles:/profiles #optional
-      - DATA/AppData/dev/input:/dev/input #optional
-      - DATA/AppData/run/udev/data:/run/udev/data #optional
+      - /DATA/AppData/kasmweb/profiles:/profiles #optional
+      - /DATA/AppData/kasmweb/run/udev/data:/run/udev/data #optional
+      - /DATA/AppData/dev/input:/dev/input:rw #added missing volume declaration
     ports:
       - 3000:3000
       - 443:443
     restart: unless-stopped
-tmpfs:
-    image: alpine
-    command: sh -c "sleep 9999999999d"
-    volumes:
-      - type: tmpfs
-        target: /tmpfs
-        tmpfs:
-          size: 1g
