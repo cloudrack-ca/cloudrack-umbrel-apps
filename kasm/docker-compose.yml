@@ -6,11 +6,8 @@ services:
     container_name: kasm
     user: "root"
     privileged: true
-    security_opt:
-      - apparmor:unconfined
-      - "label:disable"
     environment:
-      KASM_PORT: 443
+      KASM_PORT: 4443
       DOCKER_HUB_USERNAME: USER #optional
       DOCKER_HUB_PASSWORD: PASS #optional
       DOCKER_MTU: 1500 #optional
@@ -26,5 +23,5 @@ services:
       - /DATA/AppData/dev/input:/dev/input:rw #added missing volume declaration
     ports:
       - 3000:3000
-      - 443:443
+      - 4443:4443
     restart: unless-stopped

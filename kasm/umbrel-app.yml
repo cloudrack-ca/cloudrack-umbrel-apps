@@ -21,7 +21,7 @@ gallery:
   - https://i.ibb.co/6ZXkK0y/install-thumbnail.jpg
   
 releaseNotes: >-
-  - Go to https://umbrel.local:3000 to install KasmWeb after this you will be able to access your kasmweb setup from https://umbrel.local or by simply clicking the app button or the link provided if you re-access the install panel after kasmweb is installed!
+  - Go to https://umbrel.local:3000 to install KasmWeb after this you will be able to access your kasmweb setup from https://umbrel.local:4443 or by simply clicking the app button or the link provided if you re-access the install panel after kasmweb is installed!
   
   
   - First Official Release Of KasmWeb On Umbrel. keep up to date by going to https://cloudrack.ca
