@@ -1,7 +1,9 @@
-name: cloudrack-kasm
+version: "3.7"
+
 services:
   kasm:
     container_name: kasm
+    privileged: true
     environment:
         DOCKER_HUB_PASSWORD: PASS
         DOCKER_HUB_USERNAME: USER
@@ -12,8 +14,6 @@ services:
         PROXY_AUTH_ADD: "true"
     image: lscr.io/linuxserver/kasm:latest
     user: "991:991"
-    labels:
-      icon: https://icon.casaos.io/main/all/kasm.png
     ports:
       - target: 3000
         published: "3000"
@@ -21,32 +21,7 @@ services:
       - target: 443
         published: "443"
         protocol: tcp
-    privileged: true
     restart: unless-stopped
     volumes:
-      - type: bind
-        source: /DATA/AppData/$AppID/data
-        target: /opt
-      - type: bind
-        source: /DATA/AppData/$AppID/profiles
-        target: /profiles
-    networks:
-      - kasm
-networks:
-  kasm:
-    name: kasm
-x-casaos:
-  author: kasmweb
-  category: Network
-  hostname: 10.0.0.202
-  icon: https://i.ibb.co/JqVkFv4/image.png
-  index: /
-  port_map: "3022"
-  scheme: https
-  store_app_id: encouraging_davina
-  title:
-    custom: kasm
-  architectures:
-    - amd64
-    - arm64
-    - arm
+      - /DATA/AppData/$AppID/data:/opt
+      - /DATA/AppData/$AppID/profiles:/profiles
