@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: cloudrack-kasm
-name: DONT USE THIS YET - Kasmeb
+name: [TESTING Stage] - Kasmeb
 tagline: Kasm Workspaces is a container streaming platform in your browser. 
 icon: https://i.ibb.co/JqVkFv4/image.png
 category: Development
