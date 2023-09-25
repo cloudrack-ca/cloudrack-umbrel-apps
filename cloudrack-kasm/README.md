@@ -1,5 +1,3 @@
-# Still has some issues fixing Volume issues today.
-
 # KasmWeb On Umbrel
 ---
 # Install Kasmweb on your Umbrel with 
@@ -52,8 +50,8 @@ volumes:
       - target: 3000
         published: "3000"
         protocol: tcp
-      - target: 443
-        published: "443"
+      - target: 4443
+        published: "4443"
         protocol: tcp
 ```
 ---
