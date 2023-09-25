@@ -13,7 +13,6 @@ services:
         APP_PORT: 3000
         PROXY_AUTH_ADD: "true"
     image: lscr.io/linuxserver/kasm:latest
-    user: "991:991"
     ports:
       - target: 3000
         published: "3000"
