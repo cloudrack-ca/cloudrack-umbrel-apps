@@ -8,3 +8,6 @@ services:
             - '6901:6901'
         environment:
             - VNC_PW=password
+            - VNC_RESOLUTION=1920x1080
+            - VNC_COL_DEPTH=24
+            - VNC_DISPLAY=1
