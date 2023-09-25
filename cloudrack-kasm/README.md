@@ -4,6 +4,18 @@
 ```shell
 sudo ~/umbrel/scripts/app install cloudrack-kasm
 ```
+# Uninstall Kasmweb on your Umbrel with 
+```shell
+sudo ~/umbrel/scripts/app uninstall cloudrack-kasm
+```
+# Update Kasmweb on your Umbrel with 
+```shell
+sudo ~/umbrel/scripts/app uninstall cloudrack-kasm
+```
+# Reinstall Kasmweb on your Umbrel with - Calls 'uninstall', followed by 'install' for an app
+```shell
+sudo ~/umbrel/scripts/app reinstall cloudrack-kasm
+```
 # Volumes Used
 ---
 ```yaml
