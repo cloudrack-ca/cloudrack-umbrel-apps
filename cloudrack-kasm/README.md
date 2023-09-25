@@ -25,3 +25,33 @@ sudo ~/umbrel/scripts/app install cloudrack-kasm
         target: /sys/kernel/security
         read_only: true
 ```
+```yaml
+volumes:
+  kasm_opt:
+  kasm_profiles:
+  kasm_dev_input:
+  kasm_run_udev_data:
+```
+#Ports Used
+---
+```yaml
+    ports:
+      - target: 3000
+        published: "3000"
+        protocol: tcp
+      - target: 443
+        published: "443"
+        protocol: tcp
+```
+# Temp File System - 1GB On Alpine
+---
+```yaml
+  tmpfs:
+    image: alpine
+    command: sh -c "sleep 9999999999d"
+    volumes:
+      - type: tmpfs
+        target: /tmpfs
+        tmpfs:
+          size: 1g
+```
