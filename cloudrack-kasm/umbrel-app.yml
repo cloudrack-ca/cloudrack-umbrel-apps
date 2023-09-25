@@ -5,7 +5,7 @@ tagline: Kasm Workspaces is a container streaming platform in your browser.
 icon: https://i.ibb.co/JqVkFv4/image.png
 category: Development
 version: "lscr.io/linuxserver/kasm:latest"
-port: 443
+port: 3000
 description: >-
  Streaming containerized apps and desktops to end-users. The Workspaces platform provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser.
 
