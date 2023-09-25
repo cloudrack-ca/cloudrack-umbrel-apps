@@ -3,7 +3,7 @@ version: "3.7"
 services:
   kasm:
     image: lscr.io/linuxserver/kasm:latest
-    user: 1000:1000
+    user: "1000:1000"
     restart: unless-stopped
     environment:
       DOCKER_HUB_PASSWORD: PASS
