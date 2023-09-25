@@ -16,12 +16,17 @@ services:
       PROXY_AUTH_ADD: "false"
       PROXY_AUTH_WHITELIST: "/api/*"
       TITLE: cloudrack-kasm
+      NVIDIA_VISIBLE_DEVICES: all # added for GPU support
     volumes:
       - /DATA/AppData/kasmweb/data:/opt
       - /DATA/AppData/kasmweb/profiles:/profiles #optional
-      - /DATA/AppData/kasmweb/run/udev/data:/run/udev/data #optional
-      - /DATA/AppData/dev/input:/dev/input:rw #added missing volume declaration
+      - /run/udev/data:/run/udev/data #optional
+      - /dev/input:/dev/input:rw #added missing volume declaration
     ports:
       - 3000:3000
       - 4443:4443
     restart: unless-stopped
+    devices:
+      - /dev/input:/dev/input # added for gamepad support
+      - /run/udev/data:/run/udev/data # added for gamepad support
+      
