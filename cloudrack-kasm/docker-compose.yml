@@ -5,8 +5,7 @@ services:
   kasm:
     image: lscr.io/linuxserver/kasm:latest
     user: "root"
-    restart: on-failure
-    stop_grace_period: 1m
+    restart: unless-stopped
 
     environment:
       DOCKER_HUB_PASSWORD: PASS
@@ -17,11 +16,21 @@ services:
       APP_PORT: 443
       PROXY_AUTH_ADD: "true"
       PROXY_AUTH_WHITELIST: "/api/*"
+      TITLE: cloudrack-kasm
 
     volumes:
-      - ${APP_DATA_DIR}/data:/opt
-      - ${APP_DATA_DIR}/profiles:/profiles
-
+      - type: bind
+        source: /${APP_DATA_DIR}/DATA/AppData/kasm/opt
+        target: /opt
+      - type: bind
+        source: /${APP_DATA_DIR}/DATA/AppData/kasm/profiles
+        target: /profiles
+      - type: bind
+        source: /${APP_DATA_DIR}/dev/input
+        target: /dev/input
+      - type: bind
+        source: /${APP_DATA_DIR}/run/udev/data
+        target: /run/udev/data
     networks:
       - kasm
 
