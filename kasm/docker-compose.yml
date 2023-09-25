@@ -20,8 +20,6 @@ services:
     volumes:
       - /DATA/AppData/kasmweb/data:/opt
       - /DATA/AppData/kasmweb/profiles:/profiles #optional
-      - /run/udev/data:/run/udev/data #optional
-      - /dev/input:/dev/input:rw #added missing volume declaration
     ports:
       - 3000:3000
       - 4443:4443
@@ -29,4 +27,3 @@ services:
     devices:
       - /dev/input:/dev/input # added for gamepad support
       - /run/udev/data:/run/udev/data # added for gamepad support
-      
