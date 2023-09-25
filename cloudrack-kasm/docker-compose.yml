@@ -1,38 +1,77 @@
 version: "3.7"
 
 services:
+
   kasm:
-    container_name: kasm
-    environment:
-      - DOCKER_HUB_PASSWORD=PASS
-      - DOCKER_HUB_USERNAME=USER
-      - DOCKER_MTU=1500
-      - KASM_PORT=443
     image: lscr.io/linuxserver/kasm:latest
-    labels:
-      icon: https://i.ibb.co/JqVkFv4/image.png
+    user: "root"
+    restart: unless-stopped
+    privileged: true
+    security_opt:
+      - apparmor:unconfined
+      - "label:disable"
+
+    environment:
+      DOCKER_HUB_PASSWORD: PASS
+      DOCKER_HUB_USERNAME: USER
+      DOCKER_MTU: 1500
+      KASM_PORT: 443
+      APP_HOST: umbrel.local
+      APP_PORT: 3000
+      PROXY_AUTH_ADD: "false"
+      PROXY_AUTH_WHITELIST: "/api/*"
+      TITLE: cloudrack-kasm
+
+    volumes:
+      - type: volume
+        source: kasm_opt
+        target: /opt
+      - type: volume
+        source: kasm_profiles
+        target: /profiles
+      - type: volume
+        source: kasm_dev_input
+        target: /dev/input
+      - type: volume
+        source: kasm_run_udev_data
+        target: /run/udev/data
+      - type: bind
+        source: /sys/kernel/security
+        target: /sys/kernel/security
+        read_only: true
+
+    networks:
+      kasm:
+
     ports:
       - target: 3000
-        published: "3022"
+        published: "3000"
         protocol: tcp
       - target: 443
         published: "443"
         protocol: tcp
-    privileged: true
-    restart: unless-stopped
+
+    # Remove the OpenTelemetry tracing processor
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  tmpfs:
+    image: alpine
+    command: sh -c "sleep 9999999999d"
     volumes:
-      - /DATA/AppData/kasm/data:/opt
-      - /DATA/AppData/cloudrack-kasm/profiles:/profiles
-    devices: []
-    cap_add: []
-    command: []
-    networks:
-      - kasm
-    cpu_shares: 90
-    deploy:
-      resources:
-        limits:
-          memory: 15973M
+      - type: tmpfs
+        target: /tmpfs
+        tmpfs:
+          size: 100m
+
 networks:
   kasm:
-    name: kasm
+
+volumes:
+  kasm_opt:
+  kasm_profiles:
+  kasm_dev_input:
+  kasm_run_udev_data:
