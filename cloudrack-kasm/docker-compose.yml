@@ -51,13 +51,6 @@ services:
         published: "443"
         protocol: tcp
 
-    # Remove the OpenTelemetry tracing processor
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
-
   tmpfs:
     image: alpine
     command: sh -c "sleep 9999999999d"
@@ -65,7 +58,7 @@ services:
       - type: tmpfs
         target: /tmpfs
         tmpfs:
-          size: 100m
+          size: 1g
 
 networks:
   kasm:
