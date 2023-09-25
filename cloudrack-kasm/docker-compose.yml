@@ -9,17 +9,17 @@ services:
       DOCKER_HUB_PASSWORD: PASS
       DOCKER_HUB_USERNAME: USER
       DOCKER_MTU: 1500
-      KASM_PORT: 8444
+      KASM_PORT: 443
       APP_HOST: cloudrack-kasm_kasm_1
-      APP_PORT: 8444
+      APP_PORT: 443
       PROXY_AUTH_ADD: false
     volumes:
       - data:/opt
       - profiles:/profiles
     restart: unless-stopped
     ports:
-      - 8444:443
-      - 3022:3000
+      - 443:443
+      - 3000:3000
 
 volumes:
   data:
