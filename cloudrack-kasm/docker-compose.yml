@@ -3,7 +3,7 @@ version: "3.7"
 services:
   kasm:
     image: lscr.io/linuxserver/kasm:latest
-    user: root
+    user: 1000:1000
     restart: unless-stopped
     environment:
       DOCKER_HUB_PASSWORD: PASS
@@ -14,12 +14,9 @@ services:
       APP_PORT: 443
       PROXY_AUTH_ADD: "false"
     volumes:
-      - type: bind
-        source: /DATA/AppData/cloudrack-kasm/data
-        target: /opt
-      - type: bind
-        source: /DATA/AppData/cloudrack-kasm/profiles
-        target: /profiles
+      - cloudrack-kasm/data:/opt
+      - cloudrack-kasm/profiles:/profiles
+      
     restart: unless-stopped
     ports:
       - target: 3000
