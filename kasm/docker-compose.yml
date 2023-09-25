@@ -10,48 +10,31 @@ services:
     security_opt:
       - apparmor:unconfined
       - "label:disable"
-
+services:
+  kasm:
+    image: lscr.io/linuxserver/kasm:latest
+    container_name: kasm
+    privileged: true
     environment:
-      DOCKER_HUB_PASSWORD: PASS
-      DOCKER_HUB_USERNAME: USER
-      DOCKER_MTU: 1500
       KASM_PORT: 443
+      DOCKER_HUB_USERNAME: USER #optional
+      DOCKER_HUB_PASSWORD: PASS #optional
+      DOCKER_MTU: 1500 #optional
       APP_HOST: umbrel.local
       APP_PORT: 3000
       PROXY_AUTH_ADD: "false"
       PROXY_AUTH_WHITELIST: "/api/*"
       TITLE: cloudrack-kasm
-
     volumes:
-      - type: volume
-        source: kasm_opt
-        target: /opt
-      - type: volume
-        source: kasm_profiles
-        target: /profiles
-      - type: volume
-        source: kasm_dev_input
-        target: /dev/input
-      - type: volume
-        source: kasm_run_udev_data
-        target: /run/udev/data
-      - type: bind
-        source: /sys/kernel/security
-        target: /sys/kernel/security
-        read_only: true
-
-    networks:
-      kasm:
-
+      - /DATA/AppData/kasmweb/data:/opt
+      - /DATA/AppData/profiles:/profiles #optional
+      - DATA/AppData/dev/input:/dev/input #optional
+      - DATA/AppData/run/udev/data:/run/udev/data #optional
     ports:
-      - target: 3000
-        published: "3000"
-        protocol: tcp
-      - target: 443
-        published: "443"
-        protocol: tcp
-
-  tmpfs:
+      - 3000:3000
+      - 443:443
+    restart: unless-stopped
+tmpfs:
     image: alpine
     command: sh -c "sleep 9999999999d"
     volumes:
@@ -59,12 +42,3 @@ services:
         target: /tmpfs
         tmpfs:
           size: 1g
-
-networks:
-  kasm:
-
-volumes:
-  kasm_opt:
-  kasm_profiles:
-  kasm_dev_input:
-  kasm_run_udev_data:
