@@ -16,7 +16,6 @@ services:
     volumes:
       - cloudrack-kasm-data:/opt
       - cloudrack-kasm-profiles:/profiles
-      
     restart: unless-stopped
     ports:
       - target: 3000
