@@ -1,22 +1,52 @@
+name: cloudrack-kasm
 services:
-    kasm:
-        image: lscr.io/linuxserver/kasm:latest
-        container_name: kasm
-        privileged: true
-        environment:
-            - KASM_PORT=443
-            - DOCKER_HUB_USERNAME=USER #optional
-            - DOCKER_HUB_PASSWORD=PASS #optional
-            - DOCKER_MTU=1500 #optional
-            - APP_DATA_DIR=kasmweb
-            - NVIDIA_VISIBLE_DEVICES=all
-        volumes:
-            - /DATA/AppData/${APP_DATA_DIR}/data:/opt
-            - /DATA/AppData/${APP_DATA_DIR}/profiles:/profiles #optional
-            - /DATA/AppData/${APP_DATA_DIR}/dev/input:/dev/input #optional
-            - /DATA/AppData/${APP_DATA_DIR}/run/udev/data:/run/udev/data #optional
-        ports:
-            - 3000:3000
-            - 443:443
-        restart: unless-stopped
-        stop_grace_period: 1m
+  kasm:
+    container_name: kasm
+    environment:
+        DOCKER_HUB_PASSWORD: PASS
+        DOCKER_HUB_USERNAME: USER
+        DOCKER_MTU: 1500
+        KASM_PORT: 3000
+        APP_HOST: cloudrack-kasm_1
+        APP_PORT: 3000
+        PROXY_AUTH_ADD: "true"
+    image: lscr.io/linuxserver/kasm:latest
+    user: "991:991"
+    labels:
+      icon: https://icon.casaos.io/main/all/kasm.png
+    ports:
+      - target: 3000
+        published: "3000"
+        protocol: tcp
+      - target: 443
+        published: "443"
+        protocol: tcp
+    privileged: true
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/data
+        target: /opt
+      - type: bind
+        source: /DATA/AppData/$AppID/profiles
+        target: /profiles
+    networks:
+      - kasm
+networks:
+  kasm:
+    name: kasm
+x-casaos:
+  author: kasmweb
+  category: Network
+  hostname: 10.0.0.202
+  icon: https://i.ibb.co/JqVkFv4/image.png
+  index: /
+  port_map: "3022"
+  scheme: https
+  store_app_id: encouraging_davina
+  title:
+    custom: kasm
+  architectures:
+    - amd64
+    - arm64
+    - arm
