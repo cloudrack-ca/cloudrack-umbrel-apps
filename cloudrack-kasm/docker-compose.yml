@@ -1,19 +1,27 @@
 version: "2.1"
 services:
-  kasm:
-    image: lscr.io/linuxserver/kasm:latest
-    container_name: kasm
-    privileged: true
-    environment:
-      - APP_HOST=kasm
-      - APP_PORT=3000
-      - PROXY_AUTH_ADD="false"
-      - TITLE=cloudrack-kasm
-      - KASM_PORT=443
-      - DOCKER_HUB_USERNAME=USER #optional
-      - DOCKER_HUB_PASSWORD=PASS #optional
-      - DOCKER_MTU=1500 #optional
-    ports:
-      - 3000:3000
-      - 443:443
-    restart: unless-stopped
+    kasm:
+        image: lscr.io/linuxserver/kasm:latest
+        container_name: kasm
+        privileged: true
+        environment:
+            - KASM_PORT=443
+            - DOCKER_HUB_USERNAME=USER #optional
+            - DOCKER_HUB_PASSWORD=PASS #optional
+            - DOCKER_MTU=1500 #optional
+            - APP_DATA_DIR=kasmweb
+        volumes:
+            - /DATA/AppData/${APP_DATA_DIR}/data:/opt
+            - /DATA/AppData/${APP_DATA_DIR}/profiles:/profiles #optional
+            - /DATA/AppData/${APP_DATA_DIR}/dev/input:/dev/input #optional
+            - /DATA/AppData/${APP_DATA_DIR}/run/udev/data:/run/udev/data #optional
+        ports:
+            - 3000:3000
+            - 443:443
+        restart: unless-stopped
+        stop_grace_period: 1m
+        healthcheck:
+            test: ["CMD", "curl", "-f", "https://localhost:443"]
+            interval: 1m30s
+            timeout: 10s
+            retries: 3
