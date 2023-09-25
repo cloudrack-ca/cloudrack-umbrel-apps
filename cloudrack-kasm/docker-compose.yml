@@ -4,7 +4,7 @@ services:
 
   kasm:
     image: lscr.io/linuxserver/kasm:latest
-    user: "root"
+    user: "1000:1000"
     restart: unless-stopped
 
     environment:
