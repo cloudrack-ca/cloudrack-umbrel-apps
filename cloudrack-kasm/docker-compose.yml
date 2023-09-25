@@ -1,4 +1,3 @@
-version: "2.1"
 services:
     kasm:
         image: lscr.io/linuxserver/kasm:latest
@@ -10,6 +9,7 @@ services:
             - DOCKER_HUB_PASSWORD=PASS #optional
             - DOCKER_MTU=1500 #optional
             - APP_DATA_DIR=kasmweb
+            - NVIDIA_VISIBLE_DEVICES=all
         volumes:
             - /DATA/AppData/${APP_DATA_DIR}/data:/opt
             - /DATA/AppData/${APP_DATA_DIR}/profiles:/profiles #optional
@@ -20,8 +20,3 @@ services:
             - 443:443
         restart: unless-stopped
         stop_grace_period: 1m
-        healthcheck:
-            test: ["CMD", "curl", "-f", "https://localhost:443"]
-            interval: 1m30s
-            timeout: 10s
-            retries: 3
