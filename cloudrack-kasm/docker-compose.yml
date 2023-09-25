@@ -14,8 +14,8 @@ services:
       APP_PORT: 443
       PROXY_AUTH_ADD: "false"
     volumes:
-      - cloudrack-kasm/data:/opt
-      - cloudrack-kasm/profiles:/profiles
+      - cloudrack-kasm-data:/opt
+      - cloudrack-kasm-profiles:/profiles
       
     restart: unless-stopped
     ports:
@@ -26,5 +26,5 @@ services:
         published: "443"
         protocol: tcp
 volumes:
-  data:
-  profiles:
+  cloudrack-kasm-data:
+  cloudrack-kasm-profiles:
