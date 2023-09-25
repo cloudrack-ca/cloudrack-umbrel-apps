@@ -17,7 +17,6 @@ sudo ~/umbrel/scripts/app reinstall cloudrack-kasm
 ```
 ---
 # Volumes Used
----
 ```yaml
     volumes:
       - type: volume
@@ -46,7 +45,6 @@ volumes:
 ```
 ---
 # Ports Used
----
 ```yaml
     ports:
       - target: 3000
@@ -56,8 +54,8 @@ volumes:
         published: "443"
         protocol: tcp
 ```
-# Temp File System - 1GB On Alpine
 ---
+# Temp File System - 1GB On Alpine
 ```yaml
   tmpfs:
     image: alpine
