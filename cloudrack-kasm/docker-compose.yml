@@ -22,7 +22,7 @@ services:
       - kasm
     ports:
       - target: 3000
-        published: "3022"
+        published: "3000"
         protocol: tcp
       - target: 443
         published: "443"
