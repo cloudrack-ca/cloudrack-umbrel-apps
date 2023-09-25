@@ -1,0 +1,28 @@
+manifestVersion: 1
+id: cloudrack-plesk
+name: Kasmeb
+tagline: Kasmweb Workspaces is a container streaming platform in your browser. 
+icon: https://i.ibb.co/JqVkFv4/image.png
+category: Development
+version: "lscr.io/linuxserver/kasm:latest"
+port: 8443
+description: >-
+  Streaming containerized apps and desktops to end-users. The Workspaces platform provides enterprise-class orchestration, data loss prevention, and web streaming technology to enable the delivery of containerized workloads to your browser.
+
+  kasmweb.com
+  
+developer: Cloudrack
+website: https://github.com/cloudrack-ca
+submitter: Cloudrack
+submission: https://github.com/cloudrack-ca/cloudrack-umbrel-apps/cloudrack-plesk
+repo: https://github.com/cloudrack-ca/cloudrack-umbrel-apps
+support: https://github.com/cloudrack-ca/cloudrack-umbrel-apps/issues
+gallery:
+  - https://i.ibb.co/6ZXkK0y/install-thumbnail.jpg
+  
+releaseNotes: >-
+  - First Official Release Of Plesk On Umbrel. keep up to date by going to https://cloudrack.ca
+dependencies: []
+path: "/"
+defaultUsername: "admin"
+defaultPassword: "changeme1Q**"

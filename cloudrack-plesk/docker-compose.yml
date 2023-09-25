@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  
+  plesk:
+    image: plesk/plesk
+    environment:
+       APP_HOST: cloudrack-plesk_plesk_1
+       APP_PORT: 8443
+       PROXY_AUTH_ADD: "false"
+       PROXY_AUTH_WHITELIST: "/api/*"
+       TITLE: cloudrack-plesk
+       CONTAINER_NAME: name
+       tmpfs: '/tmp,/run,/run/lock'
+    ports:
+      - '80:80'
+      - '443:443'
+      - '8880:8880'
+      - '8443:8443'
+      - '8447:8447'
+    volumes:
+      - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+
