@@ -11,7 +11,7 @@ services:
       DOCKER_HUB_USERNAME: USER #optional
       DOCKER_HUB_PASSWORD: PASS #optional
       DOCKER_MTU: 1500 #optional
-      APP_HOST: umbrel.local
+      APP_HOST: cloudrack-kasm_kasm_1
       APP_PORT: 3000
       PROXY_AUTH_ADD: "false"
       PROXY_AUTH_WHITELIST: "/api/*"
