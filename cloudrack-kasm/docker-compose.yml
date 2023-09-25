@@ -5,7 +5,7 @@ services:
     container_name: kasm
     privileged: true
     environment:
-      - APP_HOST=https://umbrel.local
+      - APP_HOST=kasm
       - APP_PORT=3000
       - PROXY_AUTH_ADD="false"
       - TITLE=cloudrack-kasm
