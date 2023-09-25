@@ -21,12 +21,8 @@ services:
     privileged: true
     restart: unless-stopped
     volumes:
-      - type: bind
-        source: /DATA/AppData/cloudrack-kasm/data
-        target: /opt
-      - type: bind
-        source: /DATA/AppData/cloudrack-kasm/profiles
-        target: /profiles
+      - /DATA/AppData/kasm/data:/opt
+      - /DATA/AppData/cloudrack-kasm/profiles:/profiles
     devices: []
     cap_add: []
     command: []
