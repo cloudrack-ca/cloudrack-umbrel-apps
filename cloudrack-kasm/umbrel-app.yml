@@ -2,7 +2,7 @@ manifestVersion: 1
 id: cloudrack-kasm
 name: Kasmeb
 tagline: Kasmweb Workspaces is a container streaming platform in your browser. 
-icon: https://i.ibb.co/JqVkFv4/image.png
+icon: https://raw.githubusercontent.com/cloudrack-ca/cloudrack-umbrel-apps/master/cloudrack-kasm/icon.png
 category: Development
 version: "lscr.io/linuxserver/kasm:latest"
 port: 3000
