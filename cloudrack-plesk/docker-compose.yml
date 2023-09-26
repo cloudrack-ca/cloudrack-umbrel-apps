@@ -5,7 +5,6 @@ services:
   plesk:
     image: plesk/plesk
     environment:
-       USER: "root"
        APP_HOST: cloudrack-plesk_plesk_1
        APP_PORT: 8880
        PROXY_AUTH_ADD: "false"
