@@ -12,12 +12,15 @@ description: >-
 
   Ports Used
 
+  ```
+  test
+  ```
   
   - '8540:80' -> Default 80:80 | same as going to site without https://
   
   - '4463:443' -> Default 443:443 | same as going to site with https://
   
-  - '8880:8880' - > main app/default port for panel
+  - '8880:8880' -> main app/default port for panel
   
   - '8223:8443' 
   
