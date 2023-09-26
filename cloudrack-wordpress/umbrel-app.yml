@@ -2,7 +2,7 @@ manifestVersion: 1
 id: cloudrack-wordpress
 name: Wordpress
 tagline: WordPress The Most Powerful CMS You Will Ever Need. 
-icon: https://raw.githubusercontent.com/cloudrack-ca/umbrel-template/master/icons/wordpress-icon.png
+icon: https://raw.githubusercontent.com/cloudrack-ca/cloudrack-umbrel-apps/master/cloudrack-wordpress/wordpress-icon.png
 category: Development
 version: "wordpress:stable"
 port: 8042
@@ -18,7 +18,7 @@ submission: https://github.com/cloudrack-ca/cloudrack-umbrel-apps/cloudrack-word
 repo: https://github.com/cloudrack-ca/cloudrack-umbrel-apps
 support: https://github.com/cloudrack-ca/cloudrack-umbrel-apps/issues
 gallery:
-  - https://i.ibb.co/fSMFLWD/Word-Press-Post-960x600-896x560.png
+  - https://raw.githubusercontent.com/cloudrack-ca/cloudrack-umbrel-apps/master/cloudrack-wordpress/Word-Press-Post-960x600-896x560.png
   
 releaseNotes: >-
   - Please note that if you are not accessing your umbrel by its private exposed ip i.e 10.0.0.203 for say then you might need to open a new tab and head over to your umbrel IP:8042 to get started
