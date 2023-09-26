@@ -6,7 +6,7 @@ services:
     image: plesk/plesk
     environment:
        APP_HOST: cloudrack-plesk_plesk_1
-       APP_PORT: 8443
+       APP_PORT: 8880
        PROXY_AUTH_ADD: "false"
        PROXY_AUTH_WHITELIST: "/api/*"
        TITLE: cloudrack-plesk
@@ -15,7 +15,7 @@ services:
     ports:
       - '8540:80'
       - '4463:443'
-      - '8830:8880'
+      - '8880:8880'
       - '8443:8443'
       - '8447:8447'
     volumes:
