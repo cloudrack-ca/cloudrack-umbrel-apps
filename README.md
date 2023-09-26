@@ -21,6 +21,10 @@ sudo ~/umbrel/scripts/app install cloudrack-wordpress
 ```
 sudo ~/umbrel/scripts/app install cloudrack-kasm
 ```
+### To Install -> [`Plesk`](https://github.com/cloudrack-ca/cloudrack-umbrel-apps/tree/master/cloudrack-plesk)
+```
+sudo ~/umbrel/scripts/app install cloudrack-plesk
+```
 ---
 # To remove an app store:
 ```shell
