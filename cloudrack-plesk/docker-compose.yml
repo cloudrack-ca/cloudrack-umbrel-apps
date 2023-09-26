@@ -20,5 +20,6 @@ services:
       - '8223:8443'
       - '8447:8447'
       - '3332:21'
+      - '3844:3306'
     volumes:
       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
