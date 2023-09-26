@@ -20,4 +20,3 @@ services:
       - '8447:8447'
     volumes:
       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-

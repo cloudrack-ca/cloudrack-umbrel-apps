@@ -18,7 +18,7 @@ submission: https://github.com/cloudrack-ca/cloudrack-umbrel-apps/cloudrack-kasm
 repo: https://github.com/cloudrack-ca/cloudrack-umbrel-apps
 support: https://github.com/cloudrack-ca/cloudrack-umbrel-apps/issues
 gallery:
-  - https://i.ibb.co/6ZXkK0y/install-thumbnail.jpg
+  - https://raw.githubusercontent.com/cloudrack-ca/cloudrack-umbrel-apps/master/cloudrack-kasm/install-thumbnail.jpg
   
 releaseNotes: >-
   - Go to https://umbrel.local:3000 to install KasmWeb after this you will be able to access your kasmweb setup from https://umbrel.local:4443 or by simply clicking the app button or the link provided if you re-access the install panel after kasmweb is installed!
