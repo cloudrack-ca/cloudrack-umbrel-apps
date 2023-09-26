@@ -7,10 +7,8 @@ category: Development
 version: "plesk/plesk"
 port: 8443
 description: >-
-  Plesk is a web hosting control panel designed to help IT specialists manage web, DNS, mail, and other services through a comprehensive and user-friendly GUI.
-  It acts as an intermediary between system services and users.
-  For instance, when a user creates a website through the Plesk GUI, Plesk propagates this request to a web server, either Apache or IIS, which then adds a new virtual host to the system1. This method of administering all system services from a single web interface reduces maintenance costs and gives administrators more flexibility and control.
-  
+  Plesk is a web hosting control panel designed to help IT specialists manage web, DNS, mail, and other services through a comprehensive and user-friendly GUI. It acts as an intermediary between system services and users. For instance, when a user creates a website through the Plesk GUI, Plesk propagates this request to a web server, either Apache or IIS, which then adds a new virtual host to the system1. This method of administering all system services from a single web interface reduces maintenance costs and gives administrators more flexibility and control. 
+
   plesk.com
   
 developer: Cloudrack
