@@ -16,6 +16,8 @@ description: >-
   - '8880:8880' - > main app/default port for panel
   - '8223:8443' 
   - '8447:8447' -> App / Module Installtion Panel
+  - '3332:21' -> Shell (SSH) port
+  - '3844:3306' -> Database port
   
   plesk.com
   
