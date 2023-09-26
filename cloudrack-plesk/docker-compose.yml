@@ -13,9 +13,9 @@ services:
        CONTAINER_NAME: name
        tmpfs: '/tmp,/run,/run/lock'
     ports:
-      - '80:80'
-      - '443:443'
-      - '8880:8880'
+      - '8540:80'
+      - '4463:443'
+      - '8830:8880'
       - '8443:8443'
       - '8447:8447'
     volumes:
