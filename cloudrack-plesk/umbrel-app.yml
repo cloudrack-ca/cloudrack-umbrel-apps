@@ -12,11 +12,17 @@ description: >-
 
   Ports Used
   - '8540:80' -> Default 80:80 | same as going to site without https://
+  
   - '4463:443' -> Default 443:443 | same as going to site with https://
+  
   - '8880:8880' - > main app/default port for panel
+  
   - '8223:8443' 
+  
   - '8447:8447' -> App / Module Installtion Panel
+  
   - '3332:21' -> Shell (SSH) port
+  
   - '3844:3306' -> Database port
   
   plesk.com
