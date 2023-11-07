@@ -1,5 +1,8 @@
 # Cloudrack Umbrel Community App Store
 
+- need support? request a new app? request an app update?
+  Join my [Discord](https://discord.gg/tEz2R6JQu8)
+
 You can use the Umbrel CLI as described below.
 
 ---
