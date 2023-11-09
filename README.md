@@ -5,6 +5,9 @@
 
 You can use the Umbrel CLI as described below.
 
+# IMPORTANT NOTICE 
+# PLESK IS NOT RUNNABLE CURRENTLY AND WILL NOT UNINSTALLABLE VIA UI - IF YOU ARE HAVING THESE ISSUES PLEASE MESSAGE ME ON DISCORD
+
 ---
 # To add an app store:
 ```shell
