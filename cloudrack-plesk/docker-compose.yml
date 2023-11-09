@@ -20,4 +20,4 @@ services:
       - '3332:21'
       - '3844:3306'
     volumes:
-      - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+      - '/Plesk/sys/fs/cgroup:/sys/fs/cgroup:ro'
